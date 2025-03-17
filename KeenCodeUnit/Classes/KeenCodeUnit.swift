@@ -48,6 +48,8 @@ public struct KeenCodeUnitAttributes {
     public var textColor: UIColor = .black
     /// 文本字体 默认常规 15pt
     public var textFont: UIFont = UIFont.systemFont(ofSize: 15, weight: .regular)
+    /// 文本背景颜色
+    public var textBgColor: UIColor = .white
     
     /// 光标颜色 默认 blue
     public var cursorColor: UIColor = .blue
@@ -260,6 +262,7 @@ private extension KeenCodeUnit {
                 .alignment(.center)
                 .isSecureText(attributes.isSecureTextEntry)
                 .addViewTo(backView)
+            field.backgroundColor = attributes.textBgColor
             
             /// 光标
             let rect = CGRect(

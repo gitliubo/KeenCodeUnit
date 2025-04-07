@@ -233,6 +233,15 @@ public class KeenCodeUnit: UIView {
     public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    // textField公开方法
+    public func textFieldBecomeFirstResponder() {
+        textFiled.becomeFirstResponder()
+    }
+    
+    public func textFieldResignFirstResponder() {
+        textFiled.resignFirstResponder()
+    }
 }
 
 //MARK: - 布局|配置
